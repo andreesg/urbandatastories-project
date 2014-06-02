@@ -32,8 +32,9 @@ var cbpBGSlideshow = (function() {
 		var currentState = history.state;
 		if (currentState) {
 			current = currentState.current;
+		} else if (location.hash != "") {
+			current = location.hash.slice(1);
 		}
-		console.log(currentState);
 
 		// preload the images
 		$slideshow.imagesLoaded()
