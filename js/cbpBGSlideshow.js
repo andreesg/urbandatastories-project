@@ -47,6 +47,11 @@ var cbpBGSlideshow = (function() {
 						$slideshow.find( 'img' ).show();
 						// for older browsers add fallback here (image size and centering)
 					}
+
+					var currentState = history.state;
+					if (currentState) {
+						current = currentState.current;
+					}
 					// show first item
 					$items.eq( current ).css( 'opacity', 1 );
 					// initialize/bind the events
@@ -86,6 +91,25 @@ var cbpBGSlideshow = (function() {
 			}
 		} );
 
+		document.onkeydown = function(e) {
+			e = e || window.event;
+			if (e.keyCode == '39') {
+				navigate( 'next' );
+				if( isSlideshowActive ) { 
+					startSlideshow(); 
+				}
+			} else if (e.keyCode == '37') {
+				navigate( 'prev' );
+				if( isSlideshowActive ) { 
+					startSlideshow(); 
+				}
+			}
+		}
+
+		window.onpopstate = function(state) {
+			console.log(state);
+		}
+
 	}
 
 	function navigate( direction ) {
@@ -95,6 +119,13 @@ var cbpBGSlideshow = (function() {
 		
 		if( direction === 'next' ) {
 			current = current < itemsCount - 1 ? ++current : 0;
+			var slide_id = $items.eq(current).find('img').attr('data-id');
+			var state = {
+				data_id: slide_id, 
+				current: current
+		    }
+
+			history.pushState(state, "Image", slide_id);
 		}
 		else if( direction === 'prev' ) {
 			current = current > 0 ? --current : itemsCount - 1;
