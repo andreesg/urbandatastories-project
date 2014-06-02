@@ -53,10 +53,8 @@ var cbpBGSlideshow = (function() {
 
 			})
 			.progress( function( instance, image ) {
-				if ($(image).attr("alt") == "middle") {
-					console.log("start");
-				};
-				
+				console.log(instance);
+				console.log(image.img.src);
 			});
 	}
 
