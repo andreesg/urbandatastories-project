@@ -29,6 +29,11 @@ var cbpBGSlideshow = (function() {
 		interval = 3500;
 
 	function init( config ) {
+		var currentState = history.state;
+		if (currentState) {
+			current = currentState.current;
+		}
+		console.log(currentState);
 
 		// preload the images
 		$slideshow.imagesLoaded()
@@ -46,11 +51,6 @@ var cbpBGSlideshow = (function() {
 					else {
 						$slideshow.find( 'img' ).show();
 						// for older browsers add fallback here (image size and centering)
-					}
-
-					var currentState = history.state;
-					if (currentState) {
-						current = currentState.current;
 					}
 					// show first item
 					$items.eq( current ).css( 'opacity', 1 );
@@ -130,8 +130,8 @@ var cbpBGSlideshow = (function() {
 			data_id: slide_id, 
 			current: current
 	    }
-
-		history.pushState(state, "Image", slide_id);
+	    var stateToPush = slide_id+"#"+current;
+		history.pushState(state, "Image", stateToPush);
 
 		// new item
 		var $newItem = $items.eq( current );
