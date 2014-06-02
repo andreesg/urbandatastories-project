@@ -33,28 +33,27 @@ var cbpBGSlideshow = (function() {
 		// preload the images
 		$slideshow.imagesLoaded()
 			.always( function( instance ) {
-				
-				if( Modernizr.backgroundsize ) {
-					$items.each( function() {
-						var $item = $( this );
-						$item.css( 'background-image', 'url(' + $item.find( 'img' ).attr( 'src' ) + ')' );
-					} );
-				}
-				else {
-					$slideshow.find( 'img' ).show();
-					// for older browsers add fallback here (image size and centering)
-				}
-				// show first item
-				$items.eq( current ).css( 'opacity', 1 );
-				// initialize/bind the events
-				initEvents();
-				// start the slideshow
-				startSlideshow();
 
 			})
 			.progress( function( instance, image ) {
-				console.log(instance);
-				console.log(image.img.src);
+				if (image.img.alt == "middle") {
+					if( Modernizr.backgroundsize ) {
+						$items.each( function() {
+							var $item = $( this );
+							$item.css( 'background-image', 'url(' + $item.find( 'img' ).attr( 'src' ) + ')' );
+						} );
+					}
+					else {
+						$slideshow.find( 'img' ).show();
+						// for older browsers add fallback here (image size and centering)
+					}
+					// show first item
+					$items.eq( current ).css( 'opacity', 1 );
+					// initialize/bind the events
+					initEvents();
+					// start the slideshow
+					startSlideshow();
+				}
 			});
 	}
 
