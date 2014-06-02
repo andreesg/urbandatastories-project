@@ -119,17 +119,19 @@ var cbpBGSlideshow = (function() {
 		
 		if( direction === 'next' ) {
 			current = current < itemsCount - 1 ? ++current : 0;
-			var slide_id = $items.eq(current).find('img').attr('data-id');
-			var state = {
-				data_id: slide_id, 
-				current: current
-		    }
-
-			history.pushState(state, "Image", slide_id);
 		}
 		else if( direction === 'prev' ) {
 			current = current > 0 ? --current : itemsCount - 1;
+
 		}
+
+		var slide_id = $items.eq(current).find('img').attr('data-id');
+		var state = {
+			data_id: slide_id, 
+			current: current
+	    }
+
+		history.pushState(state, "Image", slide_id);
 
 		// new item
 		var $newItem = $items.eq( current );
