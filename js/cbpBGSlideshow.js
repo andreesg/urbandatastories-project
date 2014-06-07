@@ -148,9 +148,11 @@ var cbpBGSlideshow = (function() {
 		if (state) {
 			first = state.id;
 		} else if (pathname != "") {
+			console.log("pathname");
 			current = 0;
 			pathItem = "<li><img src='images/"+pathname+".jpg' data-id='"+pathname+"'></li>";
 			images = pathItem += images;
+			console.log("pathname: "+pathname);
 		}
 
 		$items = getItems(lastLimit);
