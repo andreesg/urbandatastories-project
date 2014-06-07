@@ -142,7 +142,8 @@ var cbpBGSlideshow = (function() {
 		first = null;
 		state = null;
 		var pathname = window.location.pathname.split("/")[1];
-
+		console.log("pathname: "+pathname);
+		
 		state = history.state;
 
 		if (state) {
