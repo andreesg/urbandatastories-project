@@ -144,9 +144,12 @@ var cbpBGSlideshow = (function() {
 		var pathname = window.location.pathname.split("/")[1];
 
 		if (pathname != "") {
-			current = 0;
+			current = 8;
 			pathItem = "<li><img src='images/"+pathname+".jpg' data-id='"+pathname+"'></li>";
-			images = pathItem += images;
+			images.unshift(pathItem);
+			var tempItem = images[8];
+			images[8] = pathItem;
+			images[0] = tempItem;
 		}
 
 		$items = getItems(lastLimit);
