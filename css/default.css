@@ -91,13 +91,13 @@ a:hover {
 	border-radius: 50%;
 	color: transparent;
 	margin: 0 0.1em;
-	border: 4px solid #47a3da;
+	border: 4px solid #000000;
 	text-indent: -8000px;
 }
 
 .container > header nav a:after {
 	content: attr(data-info);
-	color: #47a3da;
+	color: white;
 	position: absolute;
 	width: 600%;
 	top: 120%;
@@ -112,11 +112,10 @@ a:hover {
 }
 
 .container > header nav a:hover {
-	background: #47a3da;
+	background: black;
 }
 
-.icon-drop:before, 
-.icon-arrow-left:before {
+.bp-icon-drop:before {
 	font-family: 'fontawesome';
 	position: absolute;
 	top: 0;
@@ -127,7 +126,7 @@ a:hover {
 	font-weight: normal;
 	line-height: 2;
 	text-align: center;
-	color: #47a3da;
+	color: black;
 	-webkit-font-smoothing: antialiased;
 	text-indent: 8000px;
 	padding-left: 8px;
@@ -137,11 +136,7 @@ a:hover {
 	color: #fff;
 }
 
-.icon-drop:before {
-	content: "\e000";
-}
-
-.icon-arrow-left:before {
-	content: "\f060";
+.bp-icon-drop:before {
+	content: "\e001";
 }
 

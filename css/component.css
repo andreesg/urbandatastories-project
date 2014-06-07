@@ -57,7 +57,7 @@
 	width: 300px;
 	height: 100px;
 	margin: -50px 0 0 -150px;
-	top: 50%;
+	bottom: 10%;
 	left: 50%;
 }
 
@@ -99,18 +99,22 @@
 
 span.cbp-biplay:before {
 	content: "\e002";
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.5)
 }
 
 span.cbp-bipause:before {
 	content: "\e003";
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.5)
 }
 
 span.cbp-binext:before {
 	content: "\e000";
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.5)
 }
 
 span.cbp-biprev:before {
 	content: "\e001";
+	text-shadow: 1px 1px 3px rgba(0,0,0,0.5)
 }
 
 .cbp-bicontrols span.cbp-binext {

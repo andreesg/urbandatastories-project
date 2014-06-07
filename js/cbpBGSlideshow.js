@@ -8,11 +8,120 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
+
+
+var images = ["<li><img src='images/001-iiig455_2-0000-137-0001.jpg' data-id='001-iiig455_2-0000-137-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-136-0001.jpg' data-id='iiig455_2-0000-136-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-138-0001.jpg' data-id='iiig455_2-0000-138-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-140-0001.jpg' data-id='iiig455_2-0000-140-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-142-0001.jpg' data-id='iiig455_2-0000-142-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-144-0001.jpg' data-id='iiig455_2-0000-144-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-145-0001.jpg' data-id='iiig455_2-0000-145-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-147-0001.jpg' data-id='iiig455_2-0000-147-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-149-0001.jpg' data-id='iiig455_2-0000-149-0001'/></li>",
+"<li><img src='images/001-iiig455_2-0000-137-0001.jpg' data-id='001-iiig455_2-0000-137-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-150-0001.jpg' data-id='iiig455_2-0000-150-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-152-0001.jpg' data-id='iiig455_2-0000-152-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-155-0001.jpg' data-id='iiig455_2-0000-155-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-157-0001.jpg' data-id='iiig455_2-0000-157-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-158-0001.jpg' data-id='iiig455_2-0000-158-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-159-0001.jpg' data-id='iiig455_2-0000-159-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-161-0001.jpg' data-id='iiig455_2-0000-161-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-162-0001.jpg' data-id='iiig455_2-0000-162-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-163-0001.jpg' data-id='iiig455_2-0000-163-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-164-0001.jpg' data-id='iiig455_2-0000-164-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-165-0001.jpg' data-id='iiig455_2-0000-165-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-166-0001.jpg' data-id='iiig455_2-0000-166-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-169-0001.jpg' data-id='iiig455_2-0000-169-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-171-0001.jpg' data-id='iiig455_2-0000-171-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-172-0001.jpg' data-id='iiig455_2-0000-172-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-173-0001.jpg' data-id='iiig455_2-0000-173-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-174-0001.jpg' data-id='iiig455_2-0000-174-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-177-0001.jpg' data-id='iiig455_2-0000-177-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-178-0001.jpg' data-id='iiig455_2-0000-178-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-179-0001.jpg' data-id='iiig455_2-0000-179-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-180-0001.jpg' data-id='iiig455_2-0000-180-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-181-0001.jpg' data-id='iiig455_2-0000-181-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-182-0001.jpg' data-id='iiig455_2-0000-182-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-183-0001.jpg' data-id='iiig455_2-0000-183-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-185-0001.jpg' data-id='iiig455_2-0000-185-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-186-0001.jpg' data-id='iiig455_2-0000-186-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-187-0001.jpg' data-id='iiig455_2-0000-187-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-188-0001.jpg' data-id='iiig455_2-0000-188-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-204-0001.jpg' data-id='iiig455_2-0000-204-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-205-0001.jpg' data-id='iiig455_2-0000-205-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-206-0001.jpg' data-id='iiig455_2-0000-206-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-210-0001.jpg' data-id='iiig455_2-0000-210-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-211-0001.jpg' data-id='iiig455_2-0000-211-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-213-0001.jpg' data-id='iiig455_2-0000-213-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-214-0001.jpg' data-id='iiig455_2-0000-214-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-216-0001.jpg' data-id='iiig455_2-0000-216-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-217-0001.jpg' data-id='iiig455_2-0000-217-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-218-0001.jpg' data-id='iiig455_2-0000-218-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-219-0001.jpg' data-id='iiig455_2-0000-219-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-220-0001.jpg' data-id='iiig455_2-0000-220-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-221-0001.jpg' data-id='iiig455_2-0000-221-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-223-0001.jpg' data-id='iiig455_2-0000-223-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-225-0001.jpg' data-id='iiig455_2-0000-225-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-228-0001.jpg' data-id='iiig455_2-0000-228-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-229-0001.jpg' data-id='iiig455_2-0000-229-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-230-0001.jpg' data-id='iiig455_2-0000-230-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-234-0001.jpg' data-id='iiig455_2-0000-234-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-237-0001.jpg' data-id='iiig455_2-0000-237-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-238-0001.jpg' data-id='iiig455_2-0000-238-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-241-0001.jpg' data-id='iiig455_2-0000-241-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-243-0001.jpg' data-id='iiig455_2-0000-243-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-244-0001.jpg' data-id='iiig455_2-0000-244-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-246-0001.jpg' data-id='iiig455_2-0000-246-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-249-0001.jpg' data-id='iiig455_2-0000-249-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-250-0001.jpg' data-id='iiig455_2-0000-250-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-251-0001.jpg' data-id='iiig455_2-0000-251-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-252-0001.jpg' data-id='iiig455_2-0000-252-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-253-0001.jpg' data-id='iiig455_2-0000-253-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-255-0001.jpg' data-id='iiig455_2-0000-255-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-256-0001.jpg' data-id='iiig455_2-0000-256-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-257-0001.jpg' data-id='iiig455_2-0000-257-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-259-0001.jpg' data-id='iiig455_2-0000-259-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-264-0001.jpg' data-id='iiig455_2-0000-264-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-266-0001.jpg' data-id='iiig455_2-0000-266-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-267-0001.jpg' data-id='iiig455_2-0000-267-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-268-0001.jpg' data-id='iiig455_2-0000-268-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-272-0001.jpg' data-id='iiig455_2-0000-272-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-274-0001.jpg' data-id='iiig455_2-0000-274-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-275-0001.jpg' data-id='iiig455_2-0000-275-0001'/></li>",
+"<li><img src='images/iiig455_2-0000-276-0001.jpg' data-id='iiig455_2-0000-276-0001'/></li>",
+"<li><img src='images/ivr828_6-0000-0033.jpg' data-id='ivr828_6-0000-0033'/></li>",
+"<li><img src='images/ivr828_6-0000-0035.jpg' data-id='ivr828_6-0000-0035'/></li>",
+"<li><img src='images/ivr828_6-0000-0039.jpg' data-id='ivr828_6-0000-0039'/></li>",
+"<li><img src='images/ivr828_6-0000-0041.jpg' data-id='ivr828_6-0000-0041'/></li>",
+"<li><img src='images/ivr828_6-0000-0042.jpg' data-id='ivr828_6-0000-0042'/></li>",
+"<li><img src='images/ivr828_6-0000-0043.jpg' data-id='ivr828_6-0000-0043'/></li>",
+"<li><img src='images/ivr828_6-0000-0044.jpg' data-id='ivr828_6-0000-0044'/></li>",
+"<li><img src='images/ivr828_6-0000-0067.jpg' data-id='ivr828_6-0000-0067'/></li>",
+"<li><img src='images/ivr828_6-0000-0069.jpg' data-id='ivr828_6-0000-0069'/></li>",
+"<li><img src='images/ivr828_6-0000-0070.jpg' data-id='ivr828_6-0000-0070'/></li>",
+"<li><img src='images/ivr828_6-0000-0071.jpg' data-id='ivr828_6-0000-0071'/></li>",
+"<li><img src='images/ivr828_6-0000-0075.jpg' data-id='ivr828_6-0000-0075'/></li>",
+"<li><img src='images/ivr828_6-0000-0080.jpg' data-id='ivr828_6-0000-0080'/></li>",
+"<li><img src='images/ivr828_6-0000-0083.jpg' data-id='ivr828_6-0000-0083'/></li>"]
+
+function getItems(limit) {
+	var items = "";
+	for (var i = 0; i < limit; i++) {
+		items += images[i];
+	};
+	return $( items );
+}
+
+function getItem(index) {
+	var item = "";
+	item += images[index];
+	return $( item );
+}
+
 var cbpBGSlideshow = (function() {
 
 	var $slideshow = $( '#cbp-bislideshow' ),
-		$items = $slideshow.children( 'li' ),
-		itemsCount = $items.length,
 		$controls = $( '#cbp-bicontrols' ),
 		navigation = {
 			$navPrev : $controls.find( 'span.cbp-biprev' ),
@@ -20,7 +129,8 @@ var cbpBGSlideshow = (function() {
 			$navPlayPause : $controls.find( 'span.cbp-bipause' )
 		},
 		// current item´s index
-		current = 0,
+		current = 9,
+		lastLimit = 20,
 		// timeout
 		slideshowtime,
 		// true if the slideshow is active
@@ -29,21 +139,29 @@ var cbpBGSlideshow = (function() {
 		interval = 3500;
 
 	function init( config ) {
-		var currentState = history.state;
-		if (currentState) {
-			current = currentState.current;
-		} else if (location.hash != "") {
-			current = location.hash.slice(1);
+		first = null;
+		state = null;
+		var pathname = window.location.pathname.split("/")[1];
+
+		state = history.state;
+
+		if (state) {
+			first = state.id;
+		} else if (pathname != "") {
+			current = 0;
+			pathItem = "<li><img src='images/"+pathname+".jpg' data-id='"+pathname+"'></li>";
+			images = pathItem += images;
 		}
+
+		$items = getItems(lastLimit);
+
+		$slideshow.append( $items );
+		itemsCount = $items.length;
 
 		// preload the images
 		$slideshow.imagesLoaded()
 			.always( function( instance ) {
-
-			})
-			.progress( function( instance, image ) {
-				if (image.img.alt == "middle") {
-					if( Modernizr.backgroundsize ) {
+				if( Modernizr.backgroundsize ) {
 						$items.each( function() {
 							var $item = $( this );
 							$item.css( 'background-image', 'url(' + $item.find( 'img' ).attr( 'src' ) + ')' );
@@ -59,8 +177,7 @@ var cbpBGSlideshow = (function() {
 					initEvents();
 					// start the slideshow
 					startSlideshow();
-				}
-			});
+			})
 	}
 
 	function initEvents() {
@@ -114,8 +231,8 @@ var cbpBGSlideshow = (function() {
 	}
 
 	function navigate( direction ) {
-
 		// current item
+		var $itemToRemove = null;
 		var $oldItem = $items.eq( current );
 		
 		if( direction === 'next' ) {
@@ -123,17 +240,29 @@ var cbpBGSlideshow = (function() {
 		}
 		else if( direction === 'prev' ) {
 			current = current > 0 ? --current : itemsCount - 1;
+		}
 
+		if (lastLimit + 1 < images.length) {
+			$addItem = getItem(lastLimit+1);
+			$items = $items.add($addItem);
+			$slideshow.append($addItem);
+			if ( Modernizr.backgroundsize ) {
+				$addItem.each( function() {
+					var $item = $( this );
+					$item.css( 'background-image', 'url(' + $item.find( 'img' ).attr( 'src' ) + ')' );
+				});
+			}
+			lastLimit += 1;
 		}
 
 		var slide_id = $items.eq(current).find('img').attr('data-id');
 		var state = {
-			data_id: slide_id, 
-			current: current
+			id: slide_id, 
 	    }
-	    var stateToPush = slide_id+"#"+current;
+		var stateToPush = slide_id;
 		history.pushState(state, "Image", stateToPush);
 
+		itemsCount = $items.length;
 		// new item
 		var $newItem = $items.eq( current );
 		// show / hide items
