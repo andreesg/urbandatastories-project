@@ -142,18 +142,11 @@ var cbpBGSlideshow = (function() {
 		first = null;
 		state = null;
 		var pathname = window.location.pathname.split("/")[1];
-		console.log("pathname: "+pathname);
-		
-		state = history.state;
 
-		if (state) {
-			first = state.id;
-		} else if (pathname != "") {
-			console.log("pathname");
+		if (pathname != "") {
 			current = 0;
 			pathItem = "<li><img src='images/"+pathname+".jpg' data-id='"+pathname+"'></li>";
 			images = pathItem += images;
-			console.log("pathname: "+pathname);
 		}
 
 		$items = getItems(lastLimit);
