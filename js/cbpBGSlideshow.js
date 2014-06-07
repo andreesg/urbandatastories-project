@@ -147,8 +147,8 @@ var cbpBGSlideshow = (function() {
 			current = 8;
 			pathItem = "<li><img src='images/"+pathname+".jpg' data-id='"+pathname+"'></li>";
 			images.unshift(pathItem);
-			var tempItem = images[8];
-			images[8] = pathItem;
+			var tempItem = images[9];
+			images[9] = pathItem;
 			images[0] = tempItem;
 		}
 
