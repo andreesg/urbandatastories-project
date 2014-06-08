@@ -227,6 +227,17 @@ var cbpBGSlideshow = (function() {
 			console.log(state);
 		}
 
+		var timeout;
+		document.onmousemove = function() {
+  			clearTimeout(timeout);
+  			$(".clearfix").fadeIn();
+  			$("#cbp-bicontrols").fadeIn();
+  			timeout = setTimeout(function(){
+  				// hide views
+  				$(".clearfix").fadeOut();
+  				$("#cbp-bicontrols").fadeOut();
+  			}, 5000);
+		}
 	}
 
 	function navigate( direction ) {
